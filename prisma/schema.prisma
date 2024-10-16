@@ -8,10 +8,9 @@ datasource db {
 }
 
 model Component {
-  id    Int @id @default(autoincrement())
-  name  String
-  desc  String
-  parentId Int? @unique
-  parent   Component?   @relation("BlogOwnerHistory", fields: [parentId], references: [id])
-  children Component[]  @relation("BlogOwnerHistory")
+  id       Int    @id @default(autoincrement())
+  name     String
+  desc     String
+  props    Json
+  parentId Int?   @unique
 }
