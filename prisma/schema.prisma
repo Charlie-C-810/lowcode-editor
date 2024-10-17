@@ -8,9 +8,9 @@ datasource db {
 }
 
 model Component {
-  id       Int    @id @default(autoincrement())
+  id       BigInt    @id @default(autoincrement())
   name     String
-  desc     String
-  props    Json
-  parentId Int?   @unique
+  desc     String?
+  props    String?
+  parentId BigInt?
 }

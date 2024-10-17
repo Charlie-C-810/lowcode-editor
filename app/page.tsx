@@ -1,8 +1,9 @@
 // 'use client'
 import LowcodeEditor from '@/components/LowcodeEditor/LowcodeEditor'
-import { add } from './actions'
+import { AllComponent } from './actions'
 
 export default async function Home() {
-  return <LowcodeEditor />
-}
+  const components = await AllComponent()
 
+  return <LowcodeEditor components={components} />
+}

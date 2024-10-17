@@ -42,7 +42,6 @@ export function getComponentById(
 }
 
 export async function addComponent(component: Component, parentId: number) {
-  console.log('addComponent');
   const res = await prisma.component.create({
     data: {
       ...component,
